@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraRay : MonoBehaviour {
-
+	 public GameObject SelectedGameObject;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,8 +14,13 @@ public class CameraRay : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit;
 
-		if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
-			Debug.Log (hit.collider.gameObject.name);
+		if (Input.GetMouseButtonDown (0)) {
+			if (Physics.Raycast (ray, out hit, Mathf.Infinity)) {
+				SelectedGameObject=hit.collider.gameObject;
+			}
 		}
+	}
+	public GameObject getGame(){
+		return SelectedGameObject;
 	}
 }
