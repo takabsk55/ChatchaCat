@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour {
 
+	public int range;
 
 	// Use this for initialization
 	void Start () {

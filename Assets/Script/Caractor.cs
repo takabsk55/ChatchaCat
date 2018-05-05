@@ -7,7 +7,6 @@ public class Caractor : MonoBehaviour {
 	private Cells cell;
 	private GameObject master;
 	public GameObject myChara;
-	public int range;
 	// Use this for initialization
 	void Start () {
 		
@@ -39,7 +38,7 @@ public class Caractor : MonoBehaviour {
 		}
 
 		myCell=cell.CellArray[x,y,z];
-		myCell.layer = 0;
+		myCell.GetComponent<Skelton> ().myChara =myChara;
 
 	}
 

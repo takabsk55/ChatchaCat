@@ -46,7 +46,7 @@ public class Cells : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	}
-	public void Clear(){
+	public void ClearColor(){
 		for (int i = 0; i <= 3; i++) {
 			for (int j = 0; j <= 1; j++) {
 				for (int k = 0; k <= 3; k++) {
@@ -55,4 +55,5 @@ public class Cells : MonoBehaviour {
 			}
 		}
 	}
+
 }
