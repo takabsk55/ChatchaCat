@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Caractor : MonoBehaviour {
-	public GameObject myChara;
+	public GameObject myCell;
 	private Cells cell;
 	private GameObject master;
-	private GameObject myCells;
+	public GameObject myChara;
+	public int range;
 	// Use this for initialization
 	void Start () {
-			
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log (this.transform.position);
-		Turn();
+		Turn ();
 	}
 	public Vector3 xy(){
 		//Debug.Log (this.transform.position);
@@ -24,19 +25,24 @@ public class Caractor : MonoBehaviour {
 	void Turn(){
 		master = GameObject.Find ("Master");
 		cell = master.GetComponent<Cells>();	
-		Debug.Log (myChara.transform.position.x);
-		Debug.Log (cell.CellArray[1,1,1]);
+		CalcCells();
 	}
 
 	void CalcCells(){
-		float x = myChara.transform.position.x;
-		float y = myChara.transform.position.y;
-		float z = myChara.transform.position.z;
-		if (y == -0.5) {
+		int x = (int)myChara.transform.position.x;
+		int z = (int)myChara.transform.position.z;
+		int y=0;
+		if (myChara.transform.position.y== -0.5) {
 			y = 0;
-		} else if (y == 0.5) {
+		} else if (myChara.transform.position.y == 0.5) {
 			y = 1;	
 		}
+
+		myCell=cell.CellArray[x,y,z];
+		myCell.layer = 0;
+
 	}
+
+
 }
 
