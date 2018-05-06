@@ -158,6 +158,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 0
+  z: 2
 --- !u!1 &26240252
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +410,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 1
+  z: 3
 --- !u!1 &135868925 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 180368, guid: 523ef66c1f97a97409a7ad79a87aea3f, type: 2}
@@ -423,6 +429,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 1
+  z: 2
 --- !u!1 &145566536
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 1
+  z: 1
 --- !u!1 &148715817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1352,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 1
+  z: 1
 --- !u!1 &462244905
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,6 +1620,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 1
+  z: 0
 --- !u!1001 &559453254
 Prefab:
   m_ObjectHideFlags: 0
@@ -2180,6 +2198,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 1
+  z: 0
 --- !u!1 &699687538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,6 +2275,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 1
+  z: 1
 --- !u!1 &759684012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2352,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 0
+  z: 0
 --- !u!1 &795180951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2456,6 +2483,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 0
+  z: 1
 --- !u!1001 &858728956
 Prefab:
   m_ObjectHideFlags: 0
@@ -2642,6 +2672,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 0
+  z: 2
 --- !u!1 &932846434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,6 +2777,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 1
+  z: 0
 --- !u!1 &1000866564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2884,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 1
+  z: 3
 --- !u!1 &1044655702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,6 +2931,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 1
+  z: 3
 --- !u!1 &1080768685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,6 +3007,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 1
+  z: 2
 --- !u!1 &1098823896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,6 +3099,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 0
+  z: 0
 --- !u!1001 &1130551224
 Prefab:
   m_ObjectHideFlags: 0
@@ -3354,6 +3402,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 1
+  z: 0
 --- !u!1 &1214654381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,6 +3449,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 0
+  z: 0
 --- !u!1 &1221759615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,6 +3651,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 1
+  z: 3
 --- !u!1 &1300164255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,6 +3753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 0
+  z: 2
 --- !u!1001 &1324885430
 Prefab:
   m_ObjectHideFlags: 0
@@ -3914,6 +3974,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 0
+  z: 3
 --- !u!1 &1396035401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,6 +4024,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 0
+  z: 2
 --- !u!1 &1399695769
 GameObject:
   m_ObjectHideFlags: 0
@@ -4163,6 +4229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 2
+  y: 0
+  z: 1
 --- !u!1 &1472556144 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 180368, guid: 523ef66c1f97a97409a7ad79a87aea3f, type: 2}
@@ -4179,6 +4248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 0
+  z: 3
 --- !u!1001 &1500648025
 Prefab:
   m_ObjectHideFlags: 0
@@ -6301,6 +6373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 0
+  z: 0
 --- !u!1 &1715726133
 GameObject:
   m_ObjectHideFlags: 0
@@ -6346,6 +6421,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 0
+  z: 3
 --- !u!1 &1741207448
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,6 +6685,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 1
+  z: 1
 --- !u!1 &1810967446 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 180368, guid: 523ef66c1f97a97409a7ad79a87aea3f, type: 2}
@@ -6623,6 +6704,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 0
+  y: 0
+  z: 1
 --- !u!1 &1831503319
 GameObject:
   m_ObjectHideFlags: 0
@@ -7061,6 +7145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 3
+  y: 1
+  z: 2
 --- !u!1 &1989131806
 GameObject:
   m_ObjectHideFlags: 0
@@ -7251,6 +7338,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 0
+  z: 1
 --- !u!1 &2041222068
 GameObject:
   m_ObjectHideFlags: 0
@@ -7414,6 +7504,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 0
+  z: 3
 --- !u!1001 &2075562227
 Prefab:
   m_ObjectHideFlags: 0
@@ -7570,6 +7663,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myChara: {fileID: 0}
+  x: 1
+  y: 1
+  z: 2
 --- !u!1 &2134670472
 GameObject:
   m_ObjectHideFlags: 0
