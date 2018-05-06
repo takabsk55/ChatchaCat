@@ -13,7 +13,6 @@ public class Skelton : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ManegeLayer ();
-
 	}
 	public void Clicked(){
 		Debug.Log (this.gameObject.layer);
@@ -48,7 +47,8 @@ public class Skelton : MonoBehaviour {
 		Stack<GameObject> stack = new Stack<GameObject> (){ };
 		stack.Push (CellArrayTemp[x,y,z]);
 		while(true){
-			if (range < -10 || stack.Peek()==null) {
+			Debug.Log (stack);
+			if (range<10||stack.Peek()==null) {
 				break;
 			}
 			skeltonTemp=stack.Pop ().GetComponent<Skelton>();
