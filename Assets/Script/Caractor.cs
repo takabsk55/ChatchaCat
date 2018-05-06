@@ -8,14 +8,15 @@ public class Caractor : MonoBehaviour {
 	private GameObject master;
 	public GameObject myChara;
 	// Use this for initialization
-	void Start () {
+	void Start () {		
+		Turn ();
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log (this.transform.position);
-		Turn ();
+
 	}
 	public Vector3 xy(){
 		//Debug.Log (this.transform.position);
@@ -27,7 +28,7 @@ public class Caractor : MonoBehaviour {
 		CalcCells();
 	}
 
-	void CalcCells(){
+	public void CalcCells(){
 		int x = (int)myChara.transform.position.x;
 		int z = (int)myChara.transform.position.z;
 		int y=0;
@@ -36,10 +37,9 @@ public class Caractor : MonoBehaviour {
 		} else if (myChara.transform.position.y == 0.5) {
 			y = 1;	
 		}
-
 		myCell=cell.CellArray[x,y,z];
 		myCell.GetComponent<Skelton> ().myChara =myChara;
-
+		myCell.GetComponent<Skelton> ().ManegeLayer();
 	}
 
 
