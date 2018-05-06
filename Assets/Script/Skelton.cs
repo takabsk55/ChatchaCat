@@ -6,6 +6,7 @@ public class Skelton : MonoBehaviour {
 	// Use this for initialization
 	public GameObject myChara;
 	public int x,y,z;
+	public int range;
 
 	void Start () {
 	}
@@ -15,7 +16,6 @@ public class Skelton : MonoBehaviour {
 		ManegeLayer ();
 	}
 	public void Clicked(){
-		Debug.Log (this.gameObject.layer);
 		if (this.gameObject.layer == 0) {
 			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor();
 			GetComponent<Renderer> ().material.color =new Color(1f,0.92f,0.016f,0.4f);
@@ -35,6 +35,7 @@ public class Skelton : MonoBehaviour {
 	}
 
 	public void ChangeColor(){
+		Debug.Log ("call");
 		GetComponent<Renderer> ().material.color =new Color(1f,0.92f,0.016f,0.4f);
 
 	}
@@ -44,17 +45,22 @@ public class Skelton : MonoBehaviour {
 		Skelton skeltonTemp;
 		GameObject[,,] CellArrayTemp=GameObject.Find ("Master").GetComponent<Cells> ().CellArray;
 
+		CellArrayTemp [x, y, z].GetComponent<Skelton> ().range = range;
 		Stack<GameObject> stack = new Stack<GameObject> (){ };
 		stack.Push (CellArrayTemp[x,y,z]);
 		while(true){
-			Debug.Log (stack);
-			if (range<10||stack.Peek()==null) {
+			if (stack.Count==0) {
 				break;
 			}
 			skeltonTemp=stack.Pop ().GetComponent<Skelton>();
-			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].layer = 8;
+			Debug.Log (skeltonTemp);
 			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton> ().ChangeColor ();
-
+			if (skeltonTemp.range == 0) {
+				continue;
+			}
+			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].layer = 8;
+			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton>().range = range;
+			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton> ().ChangeColor ();
 
 			try{
 				if(CellArrayTemp[skeltonTemp.x+1, skeltonTemp.y, skeltonTemp.z].layer!=0){
