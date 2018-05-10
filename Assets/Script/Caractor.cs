@@ -16,7 +16,7 @@ public class Caractor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Debug.Log (this.transform.position);
-
+		CalcCells();
 	}
 	public Vector3 xy(){
 		//Debug.Log (this.transform.position);

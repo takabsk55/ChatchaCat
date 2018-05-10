@@ -23,11 +23,13 @@ public class Skelton : MonoBehaviour {
 			GetComponent<Renderer> ().material.color = new Color (1f, 0.92f, 0.016f, 0.4f);
 			CalcRange ();
 		} else if (this.gameObject.layer == 8) {
+			GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
 			GameObject.Find (myCharaTemp.name).transform.position = new Vector3 (x, y-0.5f, z);
 			GameObject.Find (myCharaTemp.name).GetComponent<Caractor> ().CalcCells();
 			myChara = myCharaTemp;
 			GameObject.Find (myChara.name).GetComponent<Caractor> ().myCell = GameObject.Find("Master").GetComponent<Cells>().CellArray[x,y,z];
 			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor ();
+			GameObject.Find (myChara.name).GetComponent<Caractor> ().CalcCells();
 
 		} else {
 			
@@ -46,11 +48,11 @@ public class Skelton : MonoBehaviour {
 	}
 
 	void CalcRange(){
-		int range = myChara.GetComponent<Piece> ().range;
+		int myCharaRange = myChara.GetComponent<Piece> ().range;
+		int rangeTemp;
 		Skelton skeltonTemp;
 		GameObject[,,] CellArrayTemp=GameObject.Find ("Master").GetComponent<Cells> ().CellArray;
-
-		CellArrayTemp [x, y, z].GetComponent<Skelton> ().range = range;
+		CellArrayTemp [x, y, z].GetComponent<Skelton> ().range = myCharaRange;
 		Stack<GameObject> stack = new Stack<GameObject> (){ };
 		stack.Push (CellArrayTemp[x,y,z]);
 		while(true){
@@ -62,7 +64,8 @@ public class Skelton : MonoBehaviour {
 			if (skeltonTemp.range == 0) {
 				continue;
 			}
-			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton>().range = range;
+
+			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton>().range--;
 			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton> ().ChangeColor ();
 
 			for (int xt = -1; xt <= 1; xt += 2) {
@@ -97,40 +100,6 @@ public class Skelton : MonoBehaviour {
 				} catch {
 				}
 			}
-			/*
-			try{
-				if(CellArrayTemp[skeltonTemp.x+1, skeltonTemp.y, skeltonTemp.z].layer!=0){
-					stack.Push(CellArrayTemp [skeltonTemp.x+1, skeltonTemp.y, skeltonTemp.z]);
-				}
-			}catch{
-			}try{
-				if(CellArrayTemp [skeltonTemp.x-1, skeltonTemp.y, skeltonTemp.z].layer!=0){
-					stack.Push(CellArrayTemp [skeltonTemp.x-1, skeltonTemp.y, skeltonTemp.z]);
-				}
-			}catch{
-			}try{
-				if(CellArrayTemp [skeltonTemp.x, skeltonTemp.y+1, skeltonTemp.z].layer!=0){
-					stack.Push(CellArrayTemp [skeltonTemp.x, skeltonTemp.y+1, skeltonTemp.z]);
-				}
-			}catch{
-			}try{
-				if(CellArrayTemp [skeltonTemp.x, skeltonTemp.y-1, skeltonTemp.z].layer!=0){
-					stack.Push(CellArrayTemp [skeltonTemp.x, skeltonTemp.y-1, skeltonTemp.z]);
-				}
-			}catch{
-			}try{
-				if(CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z+1].layer!=0){
-					stack.Push(CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z+1]);
-				}
-			}catch{
-			}try{
-				if(CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z-1].layer!=0){
-					stack.Push(CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z-1]);
-				}
-			}catch{
-			}
-			*/
-			range--;
 
 		}
 		for(int x=0;x<4;x++){

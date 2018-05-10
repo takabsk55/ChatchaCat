@@ -56,5 +56,14 @@ public class Cells : MonoBehaviour {
 			}
 		}
 	}
+	public void InitCells(){
+		for (int i = 0; i <= 3; i++) {
+			for (int j = 0; j <= 1; j++) {
+				for (int k = 0; k <= 3; k++) {
+					CellArray[i,j,k].layer =2;
+				}
+			}
+		}
+	}
 
 }
