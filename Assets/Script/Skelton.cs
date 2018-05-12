@@ -15,7 +15,6 @@ public class Skelton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (GameObject.Find ("Master").GetComponent<Cells> ().CellArray[x,y,z].layer);
 	}
 	public void Clicked(){
 		if (this.gameObject.layer == 0) {
@@ -23,6 +22,9 @@ public class Skelton : MonoBehaviour {
 			GetComponent<Renderer> ().material.color = new Color (1f, 0.92f, 0.016f, 0.4f);
 			CalcRange ();
 		} else if (this.gameObject.layer == 8) {
+			if (GameObject.Find ("cat_Idle").GetComponent<Cat> ().myCell == GameObject.Find ("Master").GetComponent<Cells> ().CellArray [this.x, this.y, this.z]) {
+				Debug.Log ("catch!!!");
+			}
 			GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
 			GameObject.Find (myCharaTemp.name).transform.position = new Vector3 (x, y-0.5f, z);
 			GameObject.Find (myCharaTemp.name).GetComponent<Caractor> ().CalcCells();
@@ -30,7 +32,7 @@ public class Skelton : MonoBehaviour {
 			GameObject.Find (myChara.name).GetComponent<Caractor> ().myCell = GameObject.Find("Master").GetComponent<Cells>().CellArray[x,y,z];
 			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor ();
 			GameObject.Find (myChara.name).GetComponent<Caractor> ().CalcCells();
-
+			GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn ();
 		} else {
 			
 		}
@@ -65,14 +67,14 @@ public class Skelton : MonoBehaviour {
 				continue;
 			}
 
-			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton>().range--;
-			CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton> ().ChangeColor ();
+			rangeTemp=CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton>().range-1;
 
 			for (int xt = -1; xt <= 1; xt += 2) {
 				try {
 					if (CellArrayTemp [skeltonTemp.x + xt, skeltonTemp.y , skeltonTemp.z ].layer != 0) {
 						CellArrayTemp [skeltonTemp.x+xt, skeltonTemp.y, skeltonTemp.z].layer = 8;
 						CellArrayTemp [skeltonTemp.x+xt, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton>().myCharaTemp=this.myChara;
+						CellArrayTemp [skeltonTemp.x+xt, skeltonTemp.y, skeltonTemp.z].GetComponent<Skelton>().range=rangeTemp;
 						stack.Push (CellArrayTemp [skeltonTemp.x + xt, skeltonTemp.y , skeltonTemp.z ]);
 					}	
 				} catch {
@@ -83,7 +85,7 @@ public class Skelton : MonoBehaviour {
 					if (CellArrayTemp [skeltonTemp.x , skeltonTemp.y + yt, skeltonTemp.z ].layer != 0) {
 						CellArrayTemp [skeltonTemp.x, skeltonTemp.y+yt, skeltonTemp.z].layer = 8;
 						CellArrayTemp [skeltonTemp.x, skeltonTemp.y+yt, skeltonTemp.z].GetComponent<Skelton>().myCharaTemp=this.myChara;
-
+						CellArrayTemp [skeltonTemp.x, skeltonTemp.y+yt, skeltonTemp.z].GetComponent<Skelton>().range=rangeTemp;
 						stack.Push (CellArrayTemp [skeltonTemp.x , skeltonTemp.y + yt, skeltonTemp.z ]);
 					}	
 				} catch {
@@ -94,7 +96,7 @@ public class Skelton : MonoBehaviour {
 					if (CellArrayTemp [skeltonTemp.x , skeltonTemp.y , skeltonTemp.z + zt].layer != 0) {		
 						CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z+zt].layer = 8;
 						CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z+zt].GetComponent<Skelton>().myCharaTemp=this.myChara;
-
+						CellArrayTemp [skeltonTemp.x, skeltonTemp.y, skeltonTemp.z+zt].GetComponent<Skelton>().range=rangeTemp;
 						stack.Push (CellArrayTemp [skeltonTemp.x , skeltonTemp.y , skeltonTemp.z + zt]);
 					}	
 				} catch {

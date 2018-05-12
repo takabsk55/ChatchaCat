@@ -5,7 +5,6 @@ using UnityEngine;
 public class Cells : MonoBehaviour {
 	public GameObject[,,] CellArray;
 
-
 	// Use this for initialization
 	void Start () {
 		CellArray=new GameObject[4, 2, 4];
