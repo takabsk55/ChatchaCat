@@ -32,10 +32,18 @@ public class Skelton : MonoBehaviour {
 			GameObject.Find (myChara.name).GetComponent<Caractor> ().myCell = GameObject.Find("Master").GetComponent<Cells>().CellArray[x,y,z];
 			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor ();
 			GameObject.Find (myChara.name).GetComponent<Caractor> ().CalcCells();
-			GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn ();
+			StartCoroutine ("Wait");
+
 		} else {
 			
 		}
+	}
+
+	private IEnumerator Wait(){
+		Debug.Log ("wait");
+		yield return new WaitForSeconds (1.0f);
+		GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn();
+
 	}
 
 	public void ManegeLayer(){
