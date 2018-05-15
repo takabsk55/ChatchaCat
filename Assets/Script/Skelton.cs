@@ -24,15 +24,24 @@ public class Skelton : MonoBehaviour {
 		} else if (this.gameObject.layer == 8) {
 			if (GameObject.Find ("cat_Idle").GetComponent<Cat> ().myCell == GameObject.Find ("Master").GetComponent<Cells> ().CellArray [this.x, this.y, this.z]) {
 				Debug.Log ("catch!!!");
+
 			}
 			GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
-			//GameObject.Find (myCharaTemp.name).transform.position = new Vector3 (x, y-0.5f, z);
-			GameObject.Find(myCharaTemp.name).GetComponent<MoveChara>().MoveCharactor(new Vector3(x,y-0.5f,z));
-			GameObject.Find (myCharaTemp.name).GetComponent<Caractor> ().CalcCells();
-			myChara = myCharaTemp;
-			GameObject.Find (myChara.name).GetComponent<Caractor> ().myCell = GameObject.Find("Master").GetComponent<Cells>().CellArray[x,y,z];
+			var moveHash = new Hashtable ();
+			Vector3 vec = new Vector3 (x, y - 0.5f, z);
+			moveHash.Add ("position", vec);
+			moveHash.Add("oncompletetarget",this.gameObject);
+			moveHash.Add ("oncomplete", "end");
+
+
 			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor ();
-			GameObject.Find (myChara.name).GetComponent<Caractor> ().CalcCells();
+
+			GameObject.Find (myCharaTemp.name).GetComponent<Caractor> ().CalcCells();
+
+
+			iTween.MoveTo(myCharaTemp,moveHash);
+
+
 			GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn();
 
 		} else {
@@ -40,8 +49,20 @@ public class Skelton : MonoBehaviour {
 		}
 	}
 
-	private IEnumerator Wait(){
+	public void end(){
+		
+		GameObject.Find (myCharaTemp.name).GetComponent<Caractor> ().CalcCells();
+		myChara = myCharaTemp;
+		GameObject.Find (myChara.name).GetComponent<Caractor> ().myCell = GameObject.Find("Master").GetComponent<Cells>().CellArray[x,y,z];
+
+		GameObject.Find (myChara.name).GetComponent<Caractor> ().CalcCells();
+		GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
+
 		Debug.Log ("wait");
+
+	}
+
+	private IEnumerator Wait(){
 		yield return new WaitForSeconds (1.0f);
 
 	}
@@ -49,6 +70,9 @@ public class Skelton : MonoBehaviour {
 	public void ManegeLayer(){
 		if (myChara != null) {
 			GameObject.Find ("Master").GetComponent<Cells> ().CellArray [x, y, z].layer = 0;
+		} else {
+			GameObject.Find ("Master").GetComponent<Cells> ().CellArray [x, y, z].layer = 2;
+
 		}
 	}
 

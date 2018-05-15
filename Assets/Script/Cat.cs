@@ -16,7 +16,8 @@ public class Cat : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		master = GameObject.Find ("Master");
-		cell = master.GetComponent<Cells>().CellArray;	
+		cell = master.GetComponent<Cells>().CellArray;
+		cell [(int)transform.position.x, (int)(transform.position.y + 0.5), (int)transform.position.z].layer = 9;
 	}
 	public void Turn(){
 		strategy ();
@@ -83,7 +84,10 @@ public class Cat : MonoBehaviour {
 		Vector3 vec=new Vector3();
 		vec+=catPosition+moveC[0]+temp05;
 		this.GetComponent<MoveChara>().MoveCat(vec);
+		GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
+
 		CalcCells();
+
 	}
 
 	public bool isMove(Vector3 randorigin,Vector3 temp){
