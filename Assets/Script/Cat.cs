@@ -63,13 +63,13 @@ public class Cat : MonoBehaviour {
 					moveC.Add (moveB [j]);
 				Vector3 rand= new Vector3();
 				rand = catPosition + moveB [j];
-				Debug.Log (cell [(int)rand.x+1, (int)rand.y, (int)rand.z].layer);
+				/*Debug.Log (cell [(int)rand.x+1, (int)rand.y, (int)rand.z].layer);
 				Debug.Log (cell [(int)rand.x-1, (int)rand.y, (int)rand.z].layer);
 				Debug.Log (cell [(int)rand.x, (int)rand.y+1, (int)rand.z].layer);
 				Debug.Log (cell [(int)rand.x, (int)rand.y-1, (int)rand.z].layer);
 				Debug.Log (cell [(int)rand.x, (int)rand.y, (int)rand.z+1].layer);
 				Debug.Log (cell [(int)rand.x, (int)rand.y, (int)rand.z-1].layer);
-
+*/
 				}
 			}
 			if (moveC.Count == 0) {
@@ -78,8 +78,11 @@ public class Cat : MonoBehaviour {
 			}
 		
 			Vector3 temp05 = new Vector3 (0f,-0.5f,0f);
-			myChara.transform.position = catPosition+moveC[0]+temp05;
-
+			
+			//myChara.transform.position = catPosition+moveC[0]+temp05;
+		Vector3 vec=new Vector3();
+		vec+=catPosition+moveC[0]+temp05;
+		this.GetComponent<MoveChara>().MoveCat(vec);
 		CalcCells();
 	}
 

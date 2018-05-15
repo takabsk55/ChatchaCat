@@ -1809,6 +1809,7 @@ GameObject:
   - component: {fileID: 575505219}
   - component: {fileID: 575505215}
   - component: {fileID: 575505216}
+  - component: {fileID: 575505220}
   m_Layer: 2
   m_Name: TT_demo_male_A
   m_TagString: Untagged
@@ -1886,6 +1887,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &575505220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575505214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5148f1645f5143448d2c6baec85426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 575505214}
 --- !u!1001 &604935926
 Prefab:
   m_ObjectHideFlags: 0
@@ -3332,6 +3345,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1130551227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1130551225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5148f1645f5143448d2c6baec85426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1130551225}
 --- !u!114 &1130551229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4556,6 +4581,7 @@ GameObject:
   - component: {fileID: 1519922370}
   - component: {fileID: 1519922373}
   - component: {fileID: 1519922374}
+  - component: {fileID: 1519922375}
   m_Layer: 2
   m_Name: TT_demo_male_B
   m_TagString: Untagged
@@ -4633,6 +4659,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1
+--- !u!114 &1519922375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519922369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5148f1645f5143448d2c6baec85426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1519922369}
 --- !u!1 &1533490764
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,6 +6360,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCell: {fileID: 0}
   myChara: {fileID: 1693654453}
+--- !u!114 &1693654459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693654453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5148f1645f5143448d2c6baec85426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 1693654453}
 --- !u!1001 &1700968117
 Prefab:
   m_ObjectHideFlags: 0
@@ -7422,6 +7472,7 @@ GameObject:
   - component: {fileID: 2041222069}
   - component: {fileID: 2041222072}
   - component: {fileID: 2041222073}
+  - component: {fileID: 2041222074}
   m_Layer: 2
   m_Name: TT_demo_police
   m_TagString: Untagged
@@ -7499,6 +7550,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 2
+--- !u!114 &2041222074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041222068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5148f1645f5143448d2c6baec85426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 2041222068}
 --- !u!1 &2053686373
 GameObject:
   m_ObjectHideFlags: 0

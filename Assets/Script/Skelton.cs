@@ -26,13 +26,14 @@ public class Skelton : MonoBehaviour {
 				Debug.Log ("catch!!!");
 			}
 			GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
-			GameObject.Find (myCharaTemp.name).transform.position = new Vector3 (x, y-0.5f, z);
+			//GameObject.Find (myCharaTemp.name).transform.position = new Vector3 (x, y-0.5f, z);
+			GameObject.Find(myCharaTemp.name).GetComponent<MoveChara>().MoveCharactor(new Vector3(x,y-0.5f,z));
 			GameObject.Find (myCharaTemp.name).GetComponent<Caractor> ().CalcCells();
 			myChara = myCharaTemp;
 			GameObject.Find (myChara.name).GetComponent<Caractor> ().myCell = GameObject.Find("Master").GetComponent<Cells>().CellArray[x,y,z];
 			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor ();
 			GameObject.Find (myChara.name).GetComponent<Caractor> ().CalcCells();
-			StartCoroutine ("Wait");
+			GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn();
 
 		} else {
 			
@@ -42,7 +43,6 @@ public class Skelton : MonoBehaviour {
 	private IEnumerator Wait(){
 		Debug.Log ("wait");
 		yield return new WaitForSeconds (1.0f);
-		GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn();
 
 	}
 
