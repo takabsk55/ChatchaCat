@@ -37,6 +37,7 @@ public class Skelton : MonoBehaviour {
 
 			iTween.MoveTo(myCharaTemp,moveHash);
 			Debug.Log ("catch");
+			GameObject.Find ("Canvas").GetComponent<Catch> ().CatchText ();
 
 
 		}else if (this.gameObject.layer == 8) {
