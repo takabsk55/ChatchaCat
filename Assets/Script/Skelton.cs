@@ -21,9 +21,26 @@ public class Skelton : MonoBehaviour {
 			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor ();
 			GetComponent<Renderer> ().material.color = new Color (1f, 0.92f, 0.016f, 0.4f);
 			CalcRange ();
-		} else if (this.gameObject.layer == 8) {
+		} else if (this.gameObject.layer == 9) {
+			GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
+			var moveHash = new Hashtable ();
+			Vector3 vec = new Vector3 (x, y - 0.5f, z);
+			moveHash.Add ("position", vec);
+			moveHash.Add("oncompletetarget",this.gameObject);
+			moveHash.Add ("oncomplete", "end");
+
+
+			GameObject.Find ("Master").GetComponent<Cells> ().ClearColor ();
+
+			GameObject.Find (myCharaTemp.name).GetComponent<Caractor> ().CalcCells();
+
+
+			iTween.MoveTo(myCharaTemp,moveHash);
+			Debug.Log ("catch");
+
+
+		}else if (this.gameObject.layer == 8) {
 			if (GameObject.Find ("cat_Idle").GetComponent<Cat> ().myCell == GameObject.Find ("Master").GetComponent<Cells> ().CellArray [this.x, this.y, this.z]) {
-				Debug.Log ("catch!!!");
 
 			}
 			GameObject.Find ("Master").GetComponent<Cells> ().InitCells ();
