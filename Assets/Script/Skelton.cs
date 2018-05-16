@@ -37,7 +37,7 @@ public class Skelton : MonoBehaviour {
 
 			iTween.MoveTo(myCharaTemp,moveHash);
 			Debug.Log ("catch");
-			GameObject.Find ("Canvas").GetComponent<Catch> ().CatchText ();
+			GameObject.Find ("Canvas").GetComponent<Catch> ().CatchImage ();
 
 
 		}else if (this.gameObject.layer == 8) {
@@ -67,7 +67,7 @@ public class Skelton : MonoBehaviour {
 			}else if(GameObject.Find ("cat_Idle").GetComponent<Cat> ().CatLife==0){
 				GameObject.Find ("RedBar").GetComponent<Hpbar> ().Life();
 
-				GameObject.Find ("Canvas").GetComponent<Catch> ().GameOverText ();
+				GameObject.Find ("Canvas").GetComponent<Catch> ().GameOverImage ();
 			}
 
 		} else {
