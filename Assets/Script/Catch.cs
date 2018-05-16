@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Catch : MonoBehaviour {
 	public GameObject obj;
 	public Image catchImg;
+	public Image gameOverImg;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +20,6 @@ public class Catch : MonoBehaviour {
 		catchImg.enabled = true;
 	}
 	public void GameOverImage(){
-		
+		gameOverImg.enabled = true;
 	}
 }
