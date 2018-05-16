@@ -1221,7 +1221,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 394214463}
-  m_Text: hoge
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.2
   m_LineSpacing: 1
@@ -2015,7 +2015,7 @@ Transform:
   m_GameObject: {fileID: 575505214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.6, y: 0.55, z: 0.6}
   m_Children:
   - {fileID: 1413408422}
   - {fileID: 125510057}
@@ -2153,6 +2153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   catchText: {fileID: 394214465}
+  obj: {fileID: 0}
 --- !u!1001 &604935926
 Prefab:
   m_ObjectHideFlags: 0
@@ -3446,7 +3447,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 494844, guid: 2db03e7c8a8135146b280e5da7e0289c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 494844, guid: 2db03e7c8a8135146b280e5da7e0289c, type: 2}
       propertyPath: m_LocalScale.z
@@ -6614,6 +6615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myCell: {fileID: 0}
   myChara: {fileID: 1693654453}
+  CatLife: 10
 --- !u!114 &1693654459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7772,7 +7774,7 @@ Transform:
   m_GameObject: {fileID: 2041222068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: -0.5, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.55, z: 0.6}
+  m_LocalScale: {x: 0.6, y: 0.53, z: 0.6}
   m_Children:
   - {fileID: 50566196}
   - {fileID: 1352453837}
