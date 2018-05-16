@@ -7,6 +7,7 @@ public class Cat : MonoBehaviour {
 	private GameObject[,,] cell;
 	private GameObject master;
 	public GameObject myChara;
+	public int CatLife = 10;
 	// Use this for initialization
 	void Start () {
 		

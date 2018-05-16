@@ -59,8 +59,13 @@ public class Skelton : MonoBehaviour {
 
 			iTween.MoveTo(myCharaTemp,moveHash);
 
-
-			GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn();
+			//ここでターンを減らす
+			GameObject.Find ("cat_Idle").GetComponent<Cat> ().CatLife--;
+			if (GameObject.Find ("cat_Idle").GetComponent<Cat> ().CatLife != 0) {
+				GameObject.Find ("cat_Idle").GetComponent<Cat> ().Turn ();
+			}else if(GameObject.Find ("cat_Idle").GetComponent<Cat> ().CatLife==0){
+				GameObject.Find ("Canvas").GetComponent<Catch> ().GameOverText ();
+			}
 
 		} else {
 			

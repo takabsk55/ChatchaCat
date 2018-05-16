@@ -19,4 +19,7 @@ public class Catch : MonoBehaviour {
 	public void CatchText(){
 		catchText.text="Catch!!!";
 	}
+	public void GameOverText(){
+		catchText.text="GameOver";
+	}
 }
