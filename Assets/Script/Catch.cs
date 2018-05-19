@@ -7,6 +7,7 @@ public class Catch : MonoBehaviour {
 	public GameObject obj;
 	public Image catchImg;
 	public Image gameOverImg;
+	public GameObject button;
 
 	// Use this for initialization
 	void Start () {
@@ -18,8 +19,11 @@ public class Catch : MonoBehaviour {
 	}
 	public void CatchImage(){
 		catchImg.enabled = true;
+		button.SetActive (true);
 	}
 	public void GameOverImage(){
 		gameOverImg.enabled = true;
+		button.SetActive (true);
+
 	}
 }
